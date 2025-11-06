@@ -32,7 +32,7 @@ jobs:
           context: ./CAR-SPRINGBOOT
           file: ./CAR-SPRINGBOOT/backend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/ansible-backend:latest
+          tags: ${{ secrets.DOCKER_USER }}/ansible-backend-practice:latest
 
       # Step 5 — Build & Push Frontend Image
       - name: Build and Push Frontend Image
@@ -41,4 +41,4 @@ jobs:
           context: ./CAR-REACT
           file: ./CAR-REACT/frontend.Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/ansible-frontend:latest
+          tags: ${{ secrets.DOCKER_USER }}/ansible-frontend-practice:latest
