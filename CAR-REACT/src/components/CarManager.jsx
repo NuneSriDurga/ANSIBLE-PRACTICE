@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import config from './config.js';
+// import config from './config.js';
 import './style.css'; 
 
 const CarManager = () => {
@@ -18,7 +18,7 @@ const CarManager = () => {
   const [message, setMessage] = useState('');
   const [editMode, setEditMode] = useState(false);
 
-  const baseUrl = `${config.url}/carapi`;
+  const baseUrl = `${import.meta.env.VITE_API_URL}/carapi`;
 
   useEffect(() => {
     fetchCars();
